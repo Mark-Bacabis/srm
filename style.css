@@ -62,6 +62,7 @@ body{
   transition: margin-left .5s;
   padding: 16px;
   margin-left: 300px;
+  min-height: 100vh;
 }
 .head{
 	padding:20px;
