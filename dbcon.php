@@ -1,9 +1,8 @@
 <?php
-$con = mysqli_connect("localhost","root","","srm");
+$onCon = mysqli_connect("sql5.freesqldatabase.com","sql5457081","qkAjxm82Ek","sql5457081");
+$con = mysqli_connect('localhost', 'root', '', 'srm');
 
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
+if(!$con){
+  echo "Error";
+}
 ?>

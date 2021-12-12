@@ -1,5 +1,8 @@
 <?php
   session_start();
+  include('dbcon.php');
+  $history = mysqli_query($con, "SELECT * FROM `invoice_order`");
+
 ?>
 <!Doctype HTML>
 <html>
@@ -62,12 +65,15 @@
           </tr>
         </thead>
         <tbody>
+          <?php if(mysqli_num_rows($history) > 0) {
+            while($row = mysqli_fetch_assoc($history)) {?>
               <tr>
-                <td>724314s14231197</td>
-                <td>2021-04-12</td>
+                <td> <?=$row['order_id']?> </td>
+                <td> <?=$row['order_date']?></td>
                 <td><a href="edit_invoice.php?update_id='.$invoiceDetails["order_id"].'"  title="Edit Invoice"><button class="btn btn-success btn-sm"><i class="fa fa-edit"></i></button></a></td>
                 <td><a href="delete-invoice.php?order_id='.$invoiceDetails['order_id'].'" title="Delete Invoice"><button class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button></a></td>
               </tr>
+          <?php } } ?>
          </tbody>
       </table>
   </div>	

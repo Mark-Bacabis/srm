@@ -58,7 +58,7 @@
 <div class="container content-invoice">
    <div class="cards">
      <div class="card-bodys">
-       <form action="" id="invoice-form" method="post" class="invoice-form" role="form" novalidate="">
+       <form action="process/insInvoice.php" id="invoice-form" method="post" class="invoice-form" role="form" novalidate="">
       <div class="load-animate animated fadeInUp">
          <div class="row">
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
